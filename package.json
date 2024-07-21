@@ -1,0 +1,7 @@
+{
+    "name": "music-player",
+    "version": "1.0.0",
+    "main": "script.js",
+    "type": "module",
+    "dependencies": {}
+  }

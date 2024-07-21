@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC Player</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="music.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="leftSide">
+        <div id="search" class="black-color">
+            <span><i class="fa-solid fa-house-fire"> </i> Home</span>
+            <span> <i class="fa-solid fa-magnifying-glass"></i> Search</span>
+        </div>
+        <div id="playlistHolder" class="black-color">
+            <p>Library</p>
+            <div id="playlist">
+                <img src="background.jpg" alt="playlist Image">
+                <div id="name">
+                    <div>Midnight Melodies</div>
+                    <button class="playlistbutton"><i id="playicon" class="fa-regular fa-circle-play"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="midpart">
+        <div id="music-background">
+            <img src="./picfolder/let me down slowly.jpg" alt="MUSIC BACKGROUND" id="background-pic">
+            <div id="songname">
+                <p id="music-name">MUSIC NAME</p>
+            </div>
+        </div>
+        <div id="DJplayer">
+            <div id="volume">
+                <input type="range" id="volume-slider">
+                <i class="fa-solid fa-music"></i>
+            </div>
+            <div id="buttonpanel">
+                <button class="playlistbutton" id="back"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="playlistbutton" id="pause-play"><i class="fa-brands fa-google-play"></i></button>
+                <button class="playlistbutton" id="forward"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+            <div id="songduration">
+                <p id="timestamp">00:00/00:00</p>
+                <input type="range" id="duration-slider">
+            </div>
+        </div>
+    </main>
+    <div class="rightpart">
+        <div id="musiclist" class="black-color">
+            <p>Songs List</p>
+            <!-- <div id="songs">loneliness <i class="fa-solid fa-guitar"></i></div> -->
+        </div>
+        <div id="Artist" class="black-color">
+            <img src="https://i.scdn.co/image/ab6761610000517410164a7f6d166aabbb00c4dd" alt="Artist PIC" id="artistPic">
+            <div id="artistname">Mr.Kitty</div>
+            <div id="uri">URI: <a href="spotify:artist:0pWwt5vGNzezEhfAcc420Y"
+                    id="urianchor">spotify:artist:0pWwt5vGNzezEhfAcc420Y</a>
+            </div>
+            <div id="followers">Followers: 733243</div>
+            <div id="genre">Genre: weirdcore</div>
+            <div id="artistType">Type: artist</div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

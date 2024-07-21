@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.black-color {
+  /* background: rgb(19, 19, 19); */
+  background: rgba(52, 51, 51, 0.35);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: px solid rgba(255, 255, 255, 0.18);
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #200122; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6f0000,
+    #200122
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6f0000,
+    #200122
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+i {
+  background-color: transparent;
+  color: #bebebe;
+  font-size: 25px;
+}
+.playlistbutton {
+  background: transparent;
+  border: solid 1px black;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+#playicon {
+  background-color: transparent;
+  color: #bebebe;
+  font-size: 31px;
+  margin-bottom: 5px;
+}
+.leftSide {
+  width: 25%;
+  height: 100vh;
+}
+#search {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin: 11px;
+  border-radius: 14px;
+}
+#search span {
+  width: 80%;
+  color: #bebebe;
+  font-size: 18px;
+}
+
+#search span i {
+  margin-right: 20px;
+}
+#playlistHolder {
+  height: 605px;
+  border-radius: 21px;
+  margin: 11px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#playlistHolder p {
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+#playlist {
+  width: 322px;
+  height: 75px;
+  padding: 7px;
+  display: flex;
+  position: relative;
+  background-color: black;
+  color: #848484;
+  border-radius: 30px;
+  transition: all 0.4s linear;
+}
+#playlist:hover {
+  width: 330px;
+  height: 360px;
+  padding: 7px;
+  display: flex;
+  position: relative;
+  background-color: rgb(63, 63, 63);
+  color: #848484;
+  border-radius: 25px;
+}
+#playlist img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/*  */
+#name {
+  position: absolute;
+  z-index: 2;
+  width: 95%;
+  bottom: 10px;
+  left: 5px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 23px;
+  background-color: #0000005e;
+  padding: 3px;
+  border-radius: 36px;
+}
+#name div {
+  padding-top: 10px;
+}
+
+/* 5555555555555555 */
+.midpart {
+  width: 50%;
+  color: white;
+}
+#music-background {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+#music-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover will resize the image to cover the entire container while maintaining aspect ratio */
+}
+#songname {
+  position: absolute;
+  bottom: 0px;
+  left: 248px;
+  width: 250px;
+  height: 31px;
+  overflow: hidden;
+  color: #bebebe;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#music-background p {
+  font-size: 28px;
+  animation: slideText 5s linear infinite;
+  white-space: nowrap; /* Prevent the text from wrapping */
+}
+@keyframes slideText {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+#music-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 7%,
+    rgba(0, 0, 0, 0.8) 14%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  border-radius: 20px; /* Adjust as needed */
+  mix-blend-mode: multiply;
+}
+
+#DJplayer {
+  height: 146px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#volume {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 196px;
+  top: 40px;
+}
+#volume-slider {
+  width: 153px;
+}
+#songduration {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#duration-slider {
+  width: 400px;
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.rightpart {
+  width: 25%;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#musiclist {
+  width: 100%;
+  height: 355px;
+  padding: 13px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+#musiclist::-webkit-scrollbar{
+  display: none;
+}
+#Artist::-webkit-scrollbar{
+  display: none;
+}
+#musiclist p {
+  width: 100%;
+  color: #a5a5a5;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 100;
+  background-color: #1f1f1fc7;
+  position: sticky;
+  top: 0px;
+  padding: 12px;
+}
+#songs {
+  height: 104px;
+  margin-top: 18px;
+  border-radius: 12px;
+  color: white;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: #bebebe;
+  cursor: pointer;
+}
+#songs:hover {
+  background-color: #484747;
+}
+
+#Artist {
+  width: 346px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 15px;
+  height: 339px;
+  overflow-y: scroll;
+  align-items: start;
+  gap: 14px;
+}
+#artistPic {
+  width: 90%;
+  height: 90%;
+  border-radius: 30px;
+  align-self: center;
+  opacity: 80%;
+}
+#artistname {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  background-color: #4b4b4b38;
+  border-radius: 42px;
+  font-size: 19px;
+}
+#uri {
+  padding: 14px;
+  width: 100%;
+  background-color: #4b4b4b38;
+  border-radius: 8px;
+  font-size: 15px;
+  height: 65px;
+}
+#uri a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+#followers {
+  padding: 14px;
+  width: 100%;
+  background-color: #4b4b4b38;
+  border-radius: 8px;
+  font-size: 15px;
+}
+#genre {
+  padding: 14px;
+  width: 100%;
+  background-color: #4b4b4b38;
+  border-radius: 8px;
+  font-size: 15px;
+}
+#artistType {
+  padding: 14px;
+  width: 100%;
+  background-color: #4b4b4b38;
+  border-radius: 8px;
+  font-size: 15px;
+}
